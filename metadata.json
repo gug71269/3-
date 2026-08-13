@@ -1,0 +1,6 @@
+{
+  "name": "백년가약 - 전통 혼례 모바일 청첩장",
+  "description": "전통 혼례의 품격과 고풍스러운 아름다움을 현대적인 에디토리얼 감성으로 재해석한 모바일 청첩장",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
