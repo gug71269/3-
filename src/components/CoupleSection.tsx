@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Phone, MessageSquare, X } from 'lucide-react';
 import { COUPLE_INFO } from '../data/weddingData';
+import traditionalCoupleImg from '../assets/images/traditional_couple_1786612138535.jpg';
 
 export const CoupleSection: React.FC = () => {
   const [contactModalOpen, setContactModalOpen] = useState(false);
@@ -22,9 +23,12 @@ export const CoupleSection: React.FC = () => {
         {/* Main Photo Card */}
         <div className="relative mb-10 rounded-2xl overflow-hidden border border-[#B4975A]/40 shadow-xl">
           <img
-            src="/src/assets/images/traditional_couple_1786612138535.jpg"
+            src={traditionalCoupleImg || '/assets/images/traditional_couple_1786612138535.jpg'}
             alt="신랑 김현우 신부 이서연 전통한복"
             referrerPolicy="no-referrer"
+            onError={(e) => {
+              (e.target as HTMLImageElement).src = '/assets/images/traditional_couple_1786612138535.jpg';
+            }}
             className="w-full h-80 object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#24211D]/80 via-transparent to-transparent flex flex-col justify-end p-6 text-[#F5F0E6] text-left">

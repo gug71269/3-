@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronDown, Sparkles } from 'lucide-react';
 import { COUPLE_INFO } from '../data/weddingData';
+import heroBgImg from '../assets/images/hanok_hero_bg_1786612124545.jpg';
 
 export const HeroSection: React.FC = () => {
   const [opened, setOpened] = useState(false);
@@ -18,9 +19,12 @@ export const HeroSection: React.FC = () => {
       {/* Background Image with Warm Dark Gradient Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/src/assets/images/hanok_hero_bg_1786612124545.jpg"
+          src={heroBgImg || '/assets/images/hanok_hero_bg_1786612124545.jpg'}
           alt="운현궁 한옥 처마 배경"
           referrerPolicy="no-referrer"
+          onError={(e) => {
+            (e.target as HTMLImageElement).src = '/assets/images/hanok_hero_bg_1786612124545.jpg';
+          }}
           className="w-full h-full object-cover object-center opacity-45 scale-105 transition-transform duration-1000 ease-out"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#24211D] via-[#24211D]/60 to-[#24211D]/40" />

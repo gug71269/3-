@@ -1,4 +1,9 @@
 import { CeremonyRite, GalleryPhoto, SideAccountInfo, GuestbookEntry } from '../types';
+import traditionalCoupleImg from '../assets/images/traditional_couple_1786612138535.jpg';
+import galleryPhoto1Img from '../assets/images/gallery_photo_1_1786612192674.jpg';
+import galleryPhoto2Img from '../assets/images/gallery_photo_2_1786612206967.jpg';
+import pyebaekImg from '../assets/images/pyebaek_ceremony_1786612156641.jpg';
+import hanokEavesImg from '../assets/images/hanok_eaves_sunset_1786612174395.jpg';
 
 export const WEDDING_DATE = '2027-05-15T12:00:00';
 
@@ -99,31 +104,31 @@ export const CEREMONY_RITES: CeremonyRite[] = [
 export const GALLERY_PHOTOS: GalleryPhoto[] = [
   {
     id: 'photo-1',
-    url: '/src/assets/images/traditional_couple_1786612138535.jpg',
+    url: traditionalCoupleImg || '/assets/images/traditional_couple_1786612138535.jpg',
     caption: '처음 만난 날',
     subCaption: '서로의 눈빛 속에 담긴 수줍은 인연의 시작'
   },
   {
     id: 'photo-2',
-    url: '/src/assets/images/gallery_photo_1_1786612192674.jpg',
+    url: galleryPhoto1Img || '/assets/images/gallery_photo_1_1786612192674.jpg',
     caption: '함께 웃었던 날',
     subCaption: '햇살 고운 한옥 뜰 아래 둘만의 고요한 미소'
   },
   {
     id: 'photo-3',
-    url: '/src/assets/images/gallery_photo_2_1786612206967.jpg',
+    url: galleryPhoto2Img || '/assets/images/gallery_photo_2_1786612206967.jpg',
     caption: '서로의 하루가 된 날',
     subCaption: '돌담길 따라 맞잡은 손 끝에 전해지는 따스함'
   },
   {
     id: 'photo-4',
-    url: '/src/assets/images/pyebaek_ceremony_1786612156641.jpg',
+    url: pyebaekImg || '/assets/images/pyebaek_ceremony_1786612156641.jpg',
     caption: '그리고 오늘',
     subCaption: '소중한 이들의 축복 속에 올리는 약속'
   },
   {
     id: 'photo-5',
-    url: '/src/assets/images/hanok_eaves_sunset_1786612174395.jpg',
+    url: hanokEavesImg || '/assets/images/hanok_eaves_sunset_1786612174395.jpg',
     caption: '앞으로의 모든 날',
     subCaption: '백 년을 함께 걸어갈 아름다운 보금자리'
   }
